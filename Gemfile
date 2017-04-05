@@ -14,6 +14,13 @@ gem "sass-rails"
 gem "sqlite3"
 gem "uglifier"
 
+# ---- gems added by ipepe ----
+# needed by Movie.pair_guru_movie_details
+gem 'json_api_client'
+
+# loads various system wide variables
+gem 'dotenv-rails'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
