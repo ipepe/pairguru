@@ -46,4 +46,7 @@ end
 
 group :test do
   gem "shoulda-matchers"
+  # ---- gems added by ipepe ----
+  # needed for stubbing json_api_client in tests
+  gem 'webmock'
 end
