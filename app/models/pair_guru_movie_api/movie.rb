@@ -5,11 +5,13 @@ module PairGuruMovieApi
     property :title, type: :string
     property :plot, type: :string
     property :rating, type: :float
-    property :poster, type: :string
+    property :poster, type: :string # is in form of absolute path
 
     def poster_url
-      if self.poster.present?
-        "https://#{ENV['MOVIE_INFO_SERVICE_HOSTNAME']}#{self.poster}"
+      if self.poster.present? && # and is compliant with url regexp
+          (url = "https://#{PairGuruMovieApi.hostname}#{self.poster}").
+              match(URI::regexp)
+        url
       end
     end
   end
