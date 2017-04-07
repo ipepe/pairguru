@@ -13,7 +13,7 @@
 #
 
 class Movie < ApplicationRecord
-  belongs_to :genre
+  belongs_to :genre, counter_cache: true
 
   def pair_guru_movie_details
     # depending on business_case, we may need to warm cache in a background job
