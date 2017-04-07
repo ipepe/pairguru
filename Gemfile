@@ -21,6 +21,9 @@ gem 'json_api_client'
 # loads various system wide variables
 gem 'dotenv-rails'
 
+# provides json serialization of movies
+gem 'active_model_serializers'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
