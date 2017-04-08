@@ -12,6 +12,17 @@ describe "Movies requests", type: :request do
     end
   end
 
+  describe 'show' do
+    it 'responds with 200' do
+      Movie.all.sample.tap do |movie|
+        visit "/movies/#{movie.id}"
+        expect(page).to have_http_status(200)
+        expect(page.body).to include(movie.pair_guru_movie_details.plot)
+        expect(page).to have_selector('.panel-footer a', count: 0)
+      end
+    end
+  end
+
   describe 'non CRUD actions' do
     let!(:user) { create :user }
     it 'requires authorization for send_info' do
