@@ -1,4 +1,4 @@
-require 'rails_helper'
+
 
 describe 'Api::V1::MoviesController requests', type: :request do
   let!(:genres) { create_list(:genre, 5, :with_movies) }

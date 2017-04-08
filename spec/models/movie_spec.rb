@@ -1,4 +1,3 @@
-require "rails_helper"
 
 describe Movie do
   let!(:movie) { create(:movie) }
