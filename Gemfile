@@ -24,6 +24,9 @@ gem 'dotenv-rails'
 # provides json serialization of movies
 gem 'active_model_serializers'
 
+# background jobs
+gem 'sidekiq'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
